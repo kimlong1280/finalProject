@@ -33,11 +33,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRepassword = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtGmail = new System.Windows.Forms.TextBox();
+            this.txtGender = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -89,6 +89,7 @@
             this.button1.TabIndex = 36;
             this.button1.Text = "Sign Up";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
@@ -100,50 +101,50 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(404, 30);
             this.dateTimePicker1.TabIndex = 35;
             // 
-            // textBox6
+            // txtRepassword
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox6.Location = new System.Drawing.Point(216, 512);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(404, 34);
-            this.textBox6.TabIndex = 34;
+            this.txtRepassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRepassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtRepassword.Location = new System.Drawing.Point(216, 512);
+            this.txtRepassword.Name = "txtRepassword";
+            this.txtRepassword.Size = new System.Drawing.Size(404, 34);
+            this.txtRepassword.TabIndex = 34;
             // 
-            // textBox5
+            // txtPassword
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox5.Location = new System.Drawing.Point(216, 443);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(404, 34);
-            this.textBox5.TabIndex = 33;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPassword.Location = new System.Drawing.Point(216, 443);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(404, 34);
+            this.txtPassword.TabIndex = 33;
             // 
-            // textBox4
+            // txtGmail
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox4.Location = new System.Drawing.Point(216, 372);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(404, 34);
-            this.textBox4.TabIndex = 32;
+            this.txtGmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtGmail.Location = new System.Drawing.Point(216, 372);
+            this.txtGmail.Name = "txtGmail";
+            this.txtGmail.Size = new System.Drawing.Size(404, 34);
+            this.txtGmail.TabIndex = 32;
             // 
-            // textBox2
+            // txtGender
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(216, 238);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(404, 34);
-            this.textBox2.TabIndex = 31;
+            this.txtGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtGender.Location = new System.Drawing.Point(216, 238);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(404, 34);
+            this.txtGender.TabIndex = 31;
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(216, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(404, 34);
-            this.textBox1.TabIndex = 30;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUsername.Location = new System.Drawing.Point(216, 166);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(404, 34);
+            this.txtUsername.TabIndex = 30;
             // 
             // label8
             // 
@@ -278,11 +279,11 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRepassword);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtGmail);
+            this.Controls.Add(this.txtGender);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -308,11 +309,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRepassword;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtGmail;
+        private System.Windows.Forms.TextBox txtGender;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
