@@ -64,10 +64,9 @@ namespace final_project1
                             MessageBox.Show("Login successful!", "Success",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // 🔧 Replace 'Dashboard' with your actual next form name
-                            //Dashboard dashboard = new Dashboard();
-                            //dashboard.Show();
-                            //this.Hide();
+                            Dashboard dashboard = new Dashboard();
+                            dashboard.Show();
+                            this.Hide();
                         }
                         else
                         {

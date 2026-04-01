@@ -14,7 +14,6 @@ namespace final_project1
 {
     public partial class SignUp : Form
     {
-        // 🔧 Change this to match your SQL Server connection
         string connectionString = "Data Source=HKL\\SQLEXPRESS03;Initial Catalog=finalProject;Integrated Security=True;";
 
         public SignUp()
@@ -32,12 +31,12 @@ namespace final_project1
         private void button1_Click(object sender, EventArgs e)
         {
             // Get values from form controls
-            string username = txtUsername.Text.Trim();       // Username field
-            string gender = txtGender.Text.Trim();       // Gender field
-            DateTime dob = dateTimePicker1.Value;      // Date of Birth
-            string gmail = txtGmail.Text.Trim();       // Gmail field
-            string password = txtPassword.Text.Trim();       // Password field
-            string repass = txtRepassword.Text.Trim();       // Re-password field
+            string username = txtUsername.Text.Trim();    
+            string gender = txtGender.Text.Trim(); 
+            DateTime dob = dateTimePicker1.Value;   
+            string gmail = txtGmail.Text.Trim();      
+            string password = txtPassword.Text.Trim();     
+            string repass = txtRepassword.Text.Trim();     
 
             // --- Basic Validation ---
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(gmail) ||
