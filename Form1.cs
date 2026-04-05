@@ -31,8 +31,8 @@ namespace final_project1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = txtUserName.Text.Trim();   // Gmail field
-            string password = txtPassword.Text.Trim();   // Password field
+            string username = txtUserName.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
             // --- Basic Validation ---
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
@@ -42,28 +42,49 @@ namespace final_project1
                 return;
             }
 
-            // --- Check Database ---
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
-                    string query = @"SELECT COUNT(*) FROM TableSignUp 
-                                     WHERE username = @username AND password = @password";
+                    // --- Admin Check via TableAdmin ---
+                    string adminQuery = @"SELECT COUNT(*) FROM TableAdmin 
+                                  WHERE username = @username AND password = @password";
 
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    using (SqlCommand adminCmd = new SqlCommand(adminQuery, conn))
                     {
-                        cmd.Parameters.AddWithValue("@username", username);
-                        cmd.Parameters.AddWithValue("@password", password);
+                        adminCmd.Parameters.AddWithValue("@username", username);
+                        adminCmd.Parameters.AddWithValue("@password", password);
 
-                        int count = (int)cmd.ExecuteScalar();
+                        int adminCount = (int)adminCmd.ExecuteScalar();
 
-                        if (count > 0)
+                        if (adminCount > 0)
+                        {
+                            MessageBox.Show("Welcome, Admin!", "Success",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MainDashboard mainDashboard = new MainDashboard();
+                            mainDashboard.Show();
+                            this.Hide();
+                            return; // stop here, skip normal user check
+                        }
+                    }
+
+                    // --- Normal User Check via TableSignUp ---
+                    string userQuery = @"SELECT COUNT(*) FROM TableSignUp 
+                                 WHERE username = @username AND password = @password";
+
+                    using (SqlCommand userCmd = new SqlCommand(userQuery, conn))
+                    {
+                        userCmd.Parameters.AddWithValue("@username", username);
+                        userCmd.Parameters.AddWithValue("@password", password);
+
+                        int userCount = (int)userCmd.ExecuteScalar();
+
+                        if (userCount > 0)
                         {
                             MessageBox.Show("Login successful!", "Success",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                             Dashboard dashboard = new Dashboard();
                             dashboard.Show();
                             this.Hide();
